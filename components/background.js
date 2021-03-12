@@ -13,6 +13,6 @@ const DottedBackground = styled.div`
     background-color: var(--bgColor);
     background-image: var(--bgImage);
     z-index: -1;
-    //transition: all 0.25s ease-out;
+    transition: all 0.2s ease-out;
   `
 export default background;

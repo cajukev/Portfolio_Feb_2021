@@ -1,6 +1,9 @@
 import '../styles/globals.scss'
+import styled, { css } from 'styled-components'
 import Background from '../components/background'
-import Toes from '../components/toes'
+import Overlay from '../components/overlay/overlay'
+import { OverPhone } from '../utils/queryComponents'
+import { barHeight } from '../components/overlay/actionBar'
 import { useState, useEffect } from 'react'
 import { AnimateSharedLayout, AnimatePresence } from "framer-motion"
 import { useRouter } from 'next/router'
@@ -39,18 +42,35 @@ function MyApp({ Component, pageProps }) {
   }, [theme]);
   //Detect preferred color scheme
   useEffect(() => {
-    settheme(window.localStorage.getItem('theme') == "true")
+    var initialTheme = true
+    if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches){
+      initialTheme = false
+    }
+    if(window.localStorage.getItem('theme')!=null){
+      initialTheme = window.localStorage.getItem('theme') == 'true'
+    }
+    window.localStorage.setItem('theme',initialTheme)
+    settheme(initialTheme)
   }, []);
-  //Post transition scroll
+
+  //Using Nav vs Using Buttons
+  const [nav, setNav] = useState(true);
+  const navTrigger = (val) => {
+    setNav(val);
+    console.log(val)
+  }
   return <>
-    <Toes theme={theme} switchTheme={switchTheme}/>
+    
     <Background />
+    <OverPhone >
+      <div style = {{ height: barHeight }}/>
+    </OverPhone>
     <AnimateSharedLayout>
       <AnimatePresence exitBeforeEnter >
-        <Component key={router.route} {...pageProps} />
+        <Component key={router.route} {...pageProps} nav={nav} navTrigger={navTrigger}/>
       </AnimatePresence>
     </AnimateSharedLayout>
+    <Overlay theme={theme} switchTheme={switchTheme} navTrigger={navTrigger}/>
   </>
 }
-
 export default MyApp

@@ -1,3 +1,15 @@
 # Next-on-Netlify Redirects
+/_next/data/kuAhM-9z4WGyYwzhMG5yQ/freelanceCS/en.json  /.netlify/functions/next_freelanceCS_lang  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/kuAhM-9z4WGyYwzhMG5yQ/freelanceCS/fr.json  /.netlify/functions/next_freelanceCS_lang  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/kuAhM-9z4WGyYwzhMG5yQ/home/en.json  /.netlify/functions/next_home_lang  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/kuAhM-9z4WGyYwzhMG5yQ/home/fr.json  /.netlify/functions/next_home_lang  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/kuAhM-9z4WGyYwzhMG5yQ/landing/en.json  /.netlify/functions/next_landing_lang  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/kuAhM-9z4WGyYwzhMG5yQ/landing/fr.json  /.netlify/functions/next_landing_lang  200!  Cookie=__prerender_bypass,__next_preview_data
 /api/hello  /.netlify/functions/next_api_hello  200
+/freelanceCS/en  /.netlify/functions/next_freelanceCS_lang  200!  Cookie=__prerender_bypass,__next_preview_data
+/freelanceCS/fr  /.netlify/functions/next_freelanceCS_lang  200!  Cookie=__prerender_bypass,__next_preview_data
+/home/en  /.netlify/functions/next_home_lang  200!  Cookie=__prerender_bypass,__next_preview_data
+/home/fr  /.netlify/functions/next_home_lang  200!  Cookie=__prerender_bypass,__next_preview_data
+/landing/en  /.netlify/functions/next_landing_lang  200!  Cookie=__prerender_bypass,__next_preview_data
+/landing/fr  /.netlify/functions/next_landing_lang  200!  Cookie=__prerender_bypass,__next_preview_data
 /_next/image*  url=:url w=:width q=:quality  /.netlify/functions/next_image?url=:url&w=:width&q=:quality  200

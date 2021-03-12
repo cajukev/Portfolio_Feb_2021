@@ -19,9 +19,6 @@
   //Body Copy
   --bodyFont: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans",
     "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
-
-  // Global Styles
-  --softShadow: drop-shadow(0px 0.1rem 0.2rem rgba(0, 0, 0, 0.4));
   //// Themes
   &.light{
     --fontColor: #1e1e1e;
@@ -29,6 +26,9 @@
     --lineSpot: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(255, 255, 255, 0.75) 42.73%, #FFFFFF 53.12%, rgba(255, 255, 255, 0.75) 62.5%, rgba(196, 196, 196, 0) 100%);
     --bgImage: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 4 4'%3E%3Cpath fill='%23eaeaea' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     --popBG: linear-gradient(180deg, #717171 0%, #2B2B2B 100%);
+    --barBG: #ECECEC;
+    --softShadow: drop-shadow(0px 0.1rem 0.2rem rgba(0, 0, 0, 0.4));
+    --largeShadow: drop-shadow(0px 0.1rem 0.4rem rgba(0, 0, 0, 0.4));
   }
   &.dark{
     --fontColor: #f2f2f2;
@@ -36,6 +36,9 @@
     --lineSpot: linear-gradient(180deg, rgba(58, 58, 58, 0) 0%, rgba(0, 0, 0, 0.55) 42.73%, rgba(0, 0, 0, 0.8) 53.12%, rgba(0, 0, 0, 0.55) 62.5%, rgba(58, 58, 58, 0) 100%);
     --bgImage: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 4 4'%3E%3Cpath fill='%23303030' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     --popBG: linear-gradient(180deg, #FAFAFA 0%, #DDDDDD 100%);
+    --barBG: #303030;
+    --softShadow: drop-shadow(0px 0.1rem 0.2rem rgba(0, 0, 0, 1));
+    --largeShadow: drop-shadow(0px 0.1rem 0.4rem rgba(0, 0, 0, 1));
   }
 }
 html {
@@ -45,6 +48,7 @@ html {
   font-size: max(1rem, min(0.5rem + 1.1vw, 4rem));
   font-size: clamp(1rem, 0.5rem + 1.1vw, 4rem);
   //overflow-x: hidden;
+  //scroll-behavior: smooth;
 }
 body {
   height: 100%;
@@ -56,10 +60,10 @@ body {
 }
 //Theme transitions
 path{
-  //transition: fill 0.45s ease-out;
+  transition: fill 0.45s ease-out;
 }
 p{
-  //transition: color 0.25s ease-out;
+  transition: color 0.25s ease-out;
 }
 
 

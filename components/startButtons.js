@@ -126,7 +126,7 @@ const startButtons = (props) => {
   }
   return (
     <ButtonContainer space={props.space}>
-      <Button onClick={button1}>
+      <Button onClick={button1}  onMouseOver={() => props.navTrigger(true)}>
         Learn more about me
       </Button>
       <ButtonSeparator> or </ButtonSeparator>
